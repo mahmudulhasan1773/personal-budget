@@ -1,0 +1,18 @@
+
+header{
+  background-color: rgb(1, 22, 28);
+  padding: 20px 0px;
+  margin-bottom: 10px;
+}
+body {
+  background-color: rgb(2, 65, 81);
+  color:rgb(255, 255, 255);
+}
+.budget-left img{
+  height: 100vh;
+ 
+}
+
+.budget-right{
+  height: auto
+}

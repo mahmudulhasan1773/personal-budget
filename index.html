@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Personal Budget </title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/57edb1bc13.js" crossorigin="anonymous"></script>
+  <script src="js/accounting.js"></script>
+</head>
+
+<body>
+  <header class="text-center mb-4">
+    <h1>Personal Budget <span><i class="fa-solid fa-coins"></i></span></h1>
+  </header>
+
+  <div class="budget mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- budget img -->
+        <div class="col-md-6">
+          <div class="budget-left">
+            <img class="img-rounded img-responsive" src="image/1.jpg" alt="budget image ">
+          </div>
+        </div>
+        <!-- budget -->
+        <div class="col-md-6">
+          <div class="budget-right">
+            <form>
+              <h2 class="text-center"> Income </h2>
+              <div class="form-group">
+                <label for="income">Income</label>
+                <input type="text" class="form-control" id="income" placeholder="My Income">
+              </div>
+              <h2 class="text-center"> Expenses </h2>
+              <div class="form-group">
+                <label for="food">Food</label>
+                <input type="text" class="form-control" id="food" placeholder="Cost of Food">
+                <label for="rent">Rent</label>
+                <input type="text" class="form-control" id="rent" placeholder="Cost of Rent">
+                <label for="cloth">Cloth</label>
+                <input type="text" class="form-control" id="cloth" placeholder="Cost of cloth">
+              </div>
+              <button id="calculate" onclick="calCulation()" type="button" class="btn btn-info">Calculate</button>
+            </form>
+            <!-- expenses and balance -->
+            <div class="totalExpenses">
+              <h2>Total Expenses is : <b id="totalExpenses"></b></h2>
+            </div>
+            <div class="balance">
+              <h2>balance is: <b id="balance"></b></h2>
+            </div>
+          </div>
+          <!-- saving area -->
+          <form class="form-inline">
+            <div class="form-group mb-2">
+              <h3>Save:</h3>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="savingPercentage" placeholder="percentage of saving">
+            </div>
+            <span>%</span></sp> <button onclick="saving()" type="button" class="btn btn-primary mb-2">Save</button>
+          </form>
+
+          <div class="saving-amount">Savinging amount : <b id="saving-amount"></b></div>
+          <div class="saving-amount">Remaining Balance : <b id="remaining-amount"></b></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+</body>
+
+</html>
